@@ -43,3 +43,10 @@ ${HOME_RESULT}  com.bikroy:id/home_all_results
 ${SEARCH_ICON}  com.bikroy:id/main_bottom_panel_search
 ${SEARCH_BOX}  com.bikroy:id/search_verticals
 ${EDIT_SEARCH_FIELD}  com.bikroy:id/edit_search
+${PROFILE_ICON}  com.bikroy:id/main_bottom_panel_my_account
+${SIGNIN_EMAIL_BTN}  com.bikroy:id/sign_in_sign_up_email_button
+${EMAIL_FIELD}  com.bikroy:id/sign_in_email
+${PASSWORD_FIELD}  com.bikroy:id/sign_in_password
+${LOGIN_BUTTON}  com.bikroy:id/register_register_button
+${INTRO_CLOSE_BUTTON}  com.bikroy:id/intro_close
+${TOOL_BAR}  com.bikroy:id/toolbar

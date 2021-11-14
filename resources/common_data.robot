@@ -16,12 +16,29 @@ Open Bikroy
   ...  platformName=${ANDROID_PLATFORM_NAME}
   ...  platformVersion=${ANDROID_PLATFORM_VERSION}
   ...  app=${ANDROID_APP}
-  ...  noReset=true
+  ...  noReset=false
 
 Click
     [Arguments]  ${locator}
     sleep  ${SLEEP_1}
     click element  ${locator}
+
+Click Profile Avatar
+    Click  ${PROFILE_ICON}
+
+Click Signin Email Button
+    Click  ${SIGNIN_EMAIL_BTN}
+
+Send Data To Email Field
+    [Arguments]  ${data}
+    Send Data  ${EMAIL_FIELD}  ${data}
+
+Send Data To Password Field
+    [Arguments]  ${data}
+    Send Data  ${PASSWORD_FIELD}  ${data}
+
+Click Login Button
+    Click  ${LOGIN_BUTTON}
 
 Click Location
     click text  Location
@@ -75,19 +92,25 @@ Send Data
     input text  ${locator}  ${data}
 
 Send Data To Location Box And Verify Result
-    Send Data  ${LOCATION_SEARCH_BOX}  ${LOCATION_SEARCH_TEXT}
+    Send Data                  ${LOCATION_SEARCH_BOX}  ${LOCATION_SEARCH_TEXT}
     element should be visible  ${LOCATION_SEARCH_RESULT}
 
 Send Data To Category Search Box And Verify Result
-    Send Data  ${CATEGORY_SEARCH_BOX}  ${CATEGORY_SEARCH_TEXT}
+    Send Data                  ${CATEGORY_SEARCH_BOX}  ${CATEGORY_SEARCH_TEXT}
     element should be visible  ${CATEGORY_SEARCH_RESULT}
 
 Filter Result Verify
-    sleep  ${SLEEP_1}
+    sleep                      ${SLEEP_1}
     element should be visible  ${HOME_RESULT}
 
+Login
+    Close Intro If On Screen
+    Click Profile Avatar
+    Click Signin Email Button
+    Send Data To Email Field     ${valid_email}
+    Send Data To Password Field  ${valid_password}
+    Click Login Button
 
-
-
-
-
+Close Intro If On Screen
+#    IF     ${INTRO_CLOSE_BUTTON}
+    Click  ${INTRO_CLOSE_BUTTON}
