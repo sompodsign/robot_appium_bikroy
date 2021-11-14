@@ -6,3 +6,11 @@ ${invalid_password}  5946644Sssdfa
 
 
 ${search_text}  Samsung
+${LOCATION_SEARCH_TEXT}  Mirpur
+${CATEGORY_SEARCH_TEXT}  Mobile
+
+${SLEEP_0}  0s
+${SLEEP_1}  1s
+
+${SEARCH_KEY_CODE}  84
+${ENTER_KEY_CODE}  66

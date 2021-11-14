@@ -1,4 +1,5 @@
 import os
+import subprocess
 import sys
 from pathlib import Path
 
@@ -13,4 +14,4 @@ cmd = "robot --outputdir {} --timestampoutputs --log log.html --report report.ht
       "{}".format(result_path, suite_1)
 
 read_write_counter(counter_path)
-os.system(cmd)
+subprocess.call(cmd, shell=True)
