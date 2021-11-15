@@ -50,3 +50,4 @@ ${PASSWORD_FIELD}  com.bikroy:id/sign_in_password
 ${LOGIN_BUTTON}  com.bikroy:id/register_register_button
 ${INTRO_CLOSE_BUTTON}  com.bikroy:id/intro_close
 ${TOOL_BAR}  com.bikroy:id/toolbar
+${CHAT_ICON}  com.bikroy:id/main_bottom_panel_chat

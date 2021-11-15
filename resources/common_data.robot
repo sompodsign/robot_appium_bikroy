@@ -16,7 +16,7 @@ Open Bikroy
   ...  platformName=${ANDROID_PLATFORM_NAME}
   ...  platformVersion=${ANDROID_PLATFORM_VERSION}
   ...  app=${ANDROID_APP}
-  ...  noReset=false
+  ...  noReset=true
 
 Click
     [Arguments]  ${locator}
@@ -67,6 +67,9 @@ Click Search Icon
 Click Product Search Box
     Click  ${SEARCH_BOX}
 
+Click Chat
+    Click  ${CHAT_ICON}
+
 Click Edit Search Box
     Click  ${EDIT_SEARCH_FIELD}
 
@@ -104,7 +107,6 @@ Filter Result Verify
     element should be visible  ${HOME_RESULT}
 
 Login
-    Close Intro If On Screen
     Click Profile Avatar
     Click Signin Email Button
     Send Data To Email Field     ${valid_email}
