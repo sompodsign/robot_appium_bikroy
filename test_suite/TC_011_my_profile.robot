@@ -3,7 +3,9 @@ Resource  ../resources/common_data.robot
 Resource  ../resources/data.robot
 
 *** Test Cases ***
-Should open app login and goto chat screen
+Should login app and go to my profile
     Open Bikroy
     Close Intro
-    Click Chat
+    Switch Language To English
+    Login
+    Click My Profile

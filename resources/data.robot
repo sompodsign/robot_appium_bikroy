@@ -9,6 +9,7 @@ ${username}  Mss  # Write your profile name here so that it can be verified afte
 ${search_text}  Samsung
 ${LOCATION_SEARCH_TEXT}  Mirpur
 ${CATEGORY_SEARCH_TEXT}  Mobile
+${LOGOUT_VERIFY_DATA}  Account
 
 # sleep data
 ${SLEEP_0}  0s

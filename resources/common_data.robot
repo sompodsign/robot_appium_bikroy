@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation  Bikroy App Automation using AppiumLibrary.
 Library        AppiumLibrary
+Library        BuiltIn
 Resource       ./locators.robot
 Resource       ./data.robot
 
@@ -16,7 +17,7 @@ Open Bikroy
   ...  platformName=${ANDROID_PLATFORM_NAME}
   ...  platformVersion=${ANDROID_PLATFORM_VERSION}
   ...  app=${ANDROID_APP}
-  ...  noReset=true
+  ...  noReset=false
 
 Click
     [Arguments]  ${locator}
@@ -112,7 +113,77 @@ Login
     Send Data To Email Field     ${valid_email}
     Send Data To Password Field  ${valid_password}
     Click Login Button
+    wait until page contains     ${POST_AD}  20
+
+Click Gear Icon
+    Click  ${GEAR_ICON}
+
+Select English
+    Click  ${ENGLISH}
+
+Close Intro
+    sleep  1s
+    Click  ${INTRO_CLOSE_BUTTON}
+
+Click My Ads
+    Click  ${MY_ADS}
+
+Click My Membership
+    Click  ${MY_MEMBERSHIP}
+
+Click Favorites
+    Click  ${FAVORITES}
+
+Click My Profile
+    Click  ${MY_PROFILE}
+
+Click Stay Safe
+    Click  ${STAY_SAFE}
+
+Click FAQ
+    Click  ${FAQ}
+
+Click How To Sell Fast
+    Click  ${HOW_TO_SELL_FAST}
+
+Click More
+    Click  ${MORE}
+
+Click Logout
+    Click  ${LOGOUT}
+
+Click Post Ad
+    Click  ${POST_AD}
+
+Click Cars Category
+    Click  ${CARS_CATEGORY}
+
+Click MotorBikes
+    Click  ${MOTORBIKES}
+
+Click Mobile Phones
+    Click  ${MOBILE_PHONES}
+
+Click Property
+    Click  ${Property}
+
+Click Overseas Jobs
+    Click  ${OVERSEAS_JOBS}
+
+Click Jobs
+    Click  ${JOBS}
 
 Close Intro If On Screen
-#    IF     ${INTRO_CLOSE_BUTTON}
-    Click  ${INTRO_CLOSE_BUTTON}
+    sleep  5s
+    ${intro_element} =  get webelement  ${intro_element}
+    run keyword if  ${intro_element} = 1  Close Intro
+
+Switch Language To English
+    Click  ${PROFILE_ICON}
+    Click Gear Icon
+    Select English
+    go back
+
+Close Application
+    sleep  2s
+    close application

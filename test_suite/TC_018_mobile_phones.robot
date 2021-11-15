@@ -3,7 +3,10 @@ Resource  ../resources/common_data.robot
 Resource  ../resources/data.robot
 
 *** Test Cases ***
-Should open app login and goto chat screen
+Should click post add and goto mobile phones category
     Open Bikroy
     Close Intro
-    Click Chat
+    Switch Language To English
+    Login
+    Click Post Ad
+    Click Mobile Phones
